@@ -1,0 +1,79 @@
+import { lazy } from 'react'
+
+const PagesRoutes = [
+  {
+    path: '/login',
+    component: lazy(() => import('../../views/pages/authentication/Login')),
+    layout: 'BlankLayout',
+    exact: true,
+    meta: {
+      action: 'manage',
+      resource: 'login',
+      authRoute: true
+    }
+  },
+  {
+    path: '/auto-login/:id',
+    component: lazy(() => import('../../views/pages/authentication/AutoLogin')),
+    layout: 'BlankLayout',
+    meta: {
+      publicRoute: true
+    }
+  },
+  {
+    path: '/profile',
+    component: lazy(() => import('../../views/pages/profile')),
+    exact: true,
+    meta: {
+      action: 'manage',
+      resource: 'profile'
+    }
+  },
+  {
+    path: '/settings',
+    component: lazy(() => import('../../views/pages/account-settings')),
+    exact: true,
+    meta: {
+      action: 'manage',
+      resource: 'settings'
+    }
+  },
+   {
+    path: '/transactions',
+    component: lazy(() => import('../../views/components/Transactions'))
+  },
+  {
+    path: '/misc/coming-soon',
+    component: lazy(() => import('../../views/pages/misc/ComingSoon')),
+    layout: 'BlankLayout',
+    meta: {
+      publicRoute: true
+    }
+  },
+  {
+    path: '/misc/not-authorized',
+    component: lazy(() => import('../../views/pages/misc/NotAuthorized')),
+    layout: 'BlankLayout',
+    meta: {
+      publicRoute: true
+    }
+  },
+  {
+    path: '/misc/maintenance',
+    component: lazy(() => import('../../views/pages/misc/Maintenance')),
+    layout: 'BlankLayout',
+    meta: {
+      publicRoute: true
+    }
+  },
+  {
+    path: '/misc/error',
+    component: lazy(() => import('../../views/pages/misc/Error')),
+    layout: 'BlankLayout',
+    meta: {
+      publicRoute: true
+    }
+  }
+]
+
+export default PagesRoutes

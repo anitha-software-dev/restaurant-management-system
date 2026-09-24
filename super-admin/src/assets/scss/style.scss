@@ -1,0 +1,202 @@
+/*================================================================================
+	
+	Version: 2.0
+	Author: ECRUBIT
+	
+================================================================================
+
+NOTE:
+------
+PLACE HERE YOUR OWN SCSS CODES AND IF NEEDED, OVERRIDE THE STYLES FROM THE OTHER STYLESHEETS.
+WE WILL RELEASE FUTURE UPDATES SO IN ORDER TO NOT OVERWRITE YOUR STYLES IT'S BETTER LIKE THIS.  */
+body,
+.navigation,
+.header-navbar,
+select {
+	font-family: "Public Sans", serif !important;
+}
+
+.btn-primary {
+	border-color: #0C0C0C !important;
+	background-color: #0C0C0C !important;
+}
+
+.main-menu.menu-light .navigation>li.active>a,
+.main-menu.menu-dark .navigation>li.active>a {
+	background: linear-gradient(118deg, #0C0C0C, #0C0C0C);
+}
+
+.page-item.active .page-link,
+.dark-layout .page-item.active .page-link {
+	background-color: #0C0C0C;
+	border-color: #0C0C0C;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+	color: #0C0C0C;
+	text-decoration: none;
+}
+
+.dropdown-item:active {
+	color: #fff;
+	text-decoration: none;
+}
+
+.btn-primary.active,
+.btn-primary:active,
+.btn-primary:focus,
+.dropdown-item:active {
+	background-color: #0C0C0C !important;
+}
+
+.progress {
+	background-color: #28c76f;
+	border-radius: 5rem;
+}
+
+.progress-bar {
+	text-align: center;
+	background-color: #ea5455;
+}
+
+.form-control:disabled,
+.form-control[readonly] {
+	background-color: transparent;
+}
+
+.breadcrumb a,
+.breadcrumb .text-primary,
+.text-primary {
+	color: #ea5455 !important;
+	text-decoration: none;
+}
+
+.uppy-Root .uppy-DragDrop-arrow {
+	fill: #ea5455 !important;
+}
+
+.uppy-Root .uppy-DragDrop-browse {
+	color: #ea5455 !important;
+	text-transform: capitalize;
+}
+
+.select__menu .select__menu-list .select__option.select__option--is-focused,
+.select__menu .select__menu-list .react-select__option.select__option--is-focused,
+.select__menu .react-select__menu-list .select__option.select__option--is-focused,
+.select__menu .react-select__menu-list .react-select__option.select__option--is-focused,
+.react-select__menu .select__menu-list .select__option.select__option--is-focused,
+.react-select__menu .select__menu-list .react-select__option.select__option--is-focused,
+.react-select__menu .react-select__menu-list .select__option.select__option--is-focused,
+.react-select__menu .react-select__menu-list .react-select__option.select__option--is-focused {
+	background-color: gba(1r15, 103, 240, 0.12);
+	color: #ea5455 !important;
+}
+
+.select__menu .select__menu-list .select__option.select__option--is-selected,
+.select__menu .select__menu-list .react-select__option.select__option--is-selected,
+.select__menu .react-select__menu-list .select__option.select__option--is-selected,
+.select__menu .react-select__menu-list .react-select__option.select__option--is-selected,
+.react-select__menu .select__menu-list .select__option.select__option--is-selected,
+.react-select__menu .select__menu-list .react-select__option.select__option--is-selected,
+.react-select__menu .react-select__menu-list .select__option.select__option--is-selected,
+.react-select__menu .react-select__menu-list .react-select__option.select__option--is-selected {
+	background-color: #ea5455 !important;
+	color: #fff !important;
+}
+
+.select__control {
+	border-color: #d8d6de !important;
+}
+
+.custom-control-input:checked~.custom-control-label::before {
+	border-color: #ea5455;
+	background-color: #ea5455;
+}
+
+.app-user-list .input-group {
+	align-items: center;
+
+	input.form-control {
+		border: 1px solid #82868b !important;
+		height: 2.8rem;
+		border-right: none !important;
+	}
+
+	input.form-control:focus {
+		border-right: 1px solid #82868b !important;
+	}
+}
+
+.loading .effect-1,
+.loading .effect-2,
+.loading .effect-3 {
+	border-left: 3px solid #ea5455;
+}
+
+.imp-popup {
+	.loading.component-loader {
+		margin-top: -40px;
+	}
+
+	.rdt_TableHead {
+		display: none;
+	}
+
+	.react-dataTable {
+		max-height: 500px;
+		overflow: scroll;
+	}
+
+	.fallback-spinner {
+		min-height: 100px;
+	}
+}
+
+.btn-outline-primary {
+	border: 1px solid #ea5455 !important;
+	background-color: transparent;
+}
+
+.btn-outline-primary,
+.btn-outline-primary:hover:not(.disabled):not(:disabled) {
+	color: #ea5455 !important;
+}
+
+.player-loop {
+	.badge.badge-secondary {
+		background: #fff;
+		color: #5e5873;
+		border: 1px solid #5e5873;
+		padding: 15px 15px;
+		border-radius: 5px;
+		cursor: move;
+		font-size: 14px;
+	}
+
+	.badge i,
+	.badge svg {
+		height: 25px;
+		width: 25px;
+		font-size: 16px;
+		stroke-width: 1;
+		vertical-align: middle;
+		color: #ea5455;
+	}
+
+	.sortable {
+		border: 1px solid #ddd;
+		padding: 0rem 1.5rem;
+		padding-bottom: 1.5rem;
+		min-height: 100px;
+	}
+}
+
+.main-menu.menu-light .navigation>li ul .active {
+	background: linear-gradient(118deg, #f27373, rgba(253, 97, 86, 0.921));
+	box-shadow: none;
+}
+
+strong {
+	color: #4F4F4F;
+}

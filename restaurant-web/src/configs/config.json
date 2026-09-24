@@ -1,0 +1,7 @@
+{
+  "NODE_ENV": "development",
+  "MEDIA_URL": "https://firebasestorage.googleapis.com/v0/b/restaurant-56c7a.firebasestorage.app/o/images%2F",
+  "BASE_URL": "",
+  "SITE_URL": "",
+  "CURRENCY": "£"
+}

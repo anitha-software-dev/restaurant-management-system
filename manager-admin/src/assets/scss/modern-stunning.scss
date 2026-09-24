@@ -1,0 +1,719 @@
+/* ======================================================================
+   Premium SaaS UI Redesign (Updated)
+   ======================================================================
+   This file overrides Vuexy defaults to provide an elegant, premium,
+   SaaS aesthetic with linear gradients and glassmorphism.
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* 1. Global Typography */
+body,
+.navigation,
+.header-navbar,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-family: 'Inter', sans-serif !important;
+}
+
+/* 2. Main Content Background (Premium Gradient) */
+body,
+html,
+.app-content {
+    background: radial-gradient(circle at top left, #f1f5f9, #ffffff), radial-gradient(circle at bottom right, #f8fafc, #e2e8f0) !important;
+    background-attachment: fixed !important;
+    color: #1e293b !important;
+}
+
+$premium-radius: 12px;
+$btn-radius: 8px;
+
+/* 3. Cards (Glassmorphism & Advanced Shadows) */
+.card {
+    background: rgba(255, 255, 255, 0.75) !important;
+    backdrop-filter: blur(24px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
+    border-radius: $premium-radius !important;
+    border: 1px solid rgba(255, 255, 255, 0.85) !important;
+    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.08), 0 0 1px rgba(0, 0, 0, 0.05) !important;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.card:hover {
+    box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.12), 0 0 1px rgba(0, 0, 0, 0.05) !important;
+    transform: translateY(-4px) !important;
+    background: rgba(255, 255, 255, 0.85) !important;
+}
+
+/* Gradient Text Utility */
+.text-gradient {
+    background: linear-gradient(120deg, #5A3EFB, #557EE6, #92E36C);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientShift 4s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* 4. Primary & Secondary Buttons */
+.btn {
+    border-radius: $btn-radius !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.3px !important;
+    padding: 0.75rem 1.5rem !important;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+    border: none !important;
+    overflow: hidden !important;
+    position: relative !important;
+}
+
+/* Primary buttons get the full vibrant gradient + glowing effect */
+.btn-primary {
+    background: linear-gradient(90deg, #5A3EFB 0%, #557EE6 50%, #92E36C 100%) !important;
+    background-size: 200% auto !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 15px rgba(90, 62, 251, 0.3) !important;
+    z-index: 1 !important;
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: inherit;
+    background: linear-gradient(90deg, #92E36C 0%, #557EE6 50%, #5A3EFB 100%);
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.card:hover {
+    box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.08) !important;
+    transform: translateY(-2px);
+}
+
+.stat-card-hover:hover {
+    transform: translateY(-4px) !important;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08) !important;
+}
+
+.btn-primary:hover {
+    box-shadow: 0 8px 25px rgba(90, 62, 251, 0.5) !important;
+    transform: translateY(-2px) !important;
+    color: #ffffff !important;
+}
+
+.btn-primary:hover::before {
+    opacity: 1;
+}
+
+/* Secondary (Cancel/Back) buttons */
+.btn-secondary {
+    background: rgba(226, 232, 240, 0.6) !important;
+    backdrop-filter: blur(10px) !important;
+    color: #475569 !important;
+    box-shadow: none !important;
+    border: 1px solid rgba(226, 232, 240, 0.8) !important;
+}
+
+.btn-secondary:hover {
+    background: rgba(203, 213, 225, 0.8) !important;
+    color: #0f172a !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05) !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.form-control,
+.input-group-text,
+.custom-select {
+    border-radius: $btn-radius !important;
+    padding: 0.65rem 1rem !important;
+    border: 1px solid #e2e8f0 !important;
+    background-color: #f8fafc !important;
+    transition: all 0.2s ease;
+    height: 2.8rem;
+}
+
+.form-control:focus {
+    background-color: #ffffff !important;
+    border-color: #557EE6 !important;
+    box-shadow: 0 0 0 3px rgba(85, 126, 230, 0.15) !important;
+}
+
+/* Outlined Input Label Style */
+.outlined-input {
+    position: relative;
+    margin-top: 1.5rem;
+}
+
+.outlined-input label.form-label {
+    position: absolute;
+    top: -10px;
+    left: 12px;
+    background: #ffffff;
+    padding: 0 5px;
+    z-index: 10;
+    font-size: 0.8rem;
+    color: #64748b;
+    transition: all 0.2s ease;
+}
+
+.outlined-input:focus-within label.form-label {
+    color: #557EE6 !important;
+    font-weight: 600;
+}
+
+/* 5. Navigation Sidebar (Clean White with Theme Color active states) */
+.main-menu.menu-light {
+    background: #ffffff !important;
+    box-shadow: 4px 0 24px rgba(0, 0, 0, 0.04) !important;
+    border-right: 1px solid rgba(226, 232, 240, 0.8) !important;
+}
+
+/* Sidebar Text & Icons */
+.main-menu.menu-light .navigation>li {
+    margin: 0 1rem;
+    margin-bottom: 0.25rem;
+}
+
+.main-menu.menu-light .navigation>li>a {
+    color: #475569 !important;
+    /* Dark legible text */
+    border-radius: $btn-radius !important;
+    padding: 10px 15px !important;
+    margin: 0 !important;
+    transition: all 0.2s ease;
+}
+
+.main-menu.menu-light .navigation>li>a i,
+.main-menu.menu-light .navigation>li>a svg,
+.main-menu.menu-light .navigation>li>a span {
+    color: #475569 !important;
+}
+
+/* Sidebar Hover */
+.main-menu.menu-light .navigation>li:not(.active)>a:hover {
+    background: rgba(85, 126, 230, 0.05) !important;
+    color: #557EE6 !important;
+    transform: translateX(4px);
+}
+
+.main-menu.menu-light .navigation>li:not(.active)>a:hover i,
+.main-menu.menu-light .navigation>li:not(.active)>a:hover svg,
+.main-menu.menu-light .navigation>li:not(.active)>a:hover span {
+    color: #557EE6 !important;
+}
+
+
+/* Sidebar Active (Theme Color) */
+.main-menu.menu-light .navigation>li.active>a {
+    background: linear-gradient(90deg, #5A3EFB 0%, #557EE6 50%, #92E36C 100%) !important;
+    background-size: 200% auto !important;
+    box-shadow: 0 4px 15px rgba(85, 126, 230, 0.3) !important;
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    animation: gradientShift 4s ease infinite !important;
+}
+
+.main-menu.menu-light .navigation>li.active>a i,
+.main-menu.menu-light .navigation>li.active>a svg,
+.main-menu.menu-light .navigation>li.active>a span {
+    color: #ffffff !important;
+}
+
+
+
+
+
+
+
+/* Sidebar Submenus */
+.main-menu.menu-light .navigation>li ul {
+    border-radius: $btn-radius !important;
+    background: transparent !important;
+}
+
+.main-menu.menu-light .navigation>li ul li a {
+    color: #64748b !important;
+}
+
+.main-menu.menu-light .navigation>li ul li:not(.active) a:hover {
+    color: #557EE6 !important;
+}
+
+.main-menu.menu-light .navigation>li ul li.active a {
+    background: rgba(85, 126, 230, 0.1) !important;
+    color: #557EE6 !important;
+    font-weight: 600 !important;
+}
+
+.main-menu.menu-light .navigation>li ul .active {
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+/* 6. Header / Navbar */
+.header-navbar {
+    background: rgba(255, 255, 255, 0.75) !important;
+    backdrop-filter: blur(24px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6) !important;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05) !important;
+    transition: all 0.3s ease;
+}
+
+.header-navbar.floating-nav {
+    border-radius: $premium-radius !important;
+    margin-top: 1.5rem !important;
+    width: calc(100vw - 260px - 4rem) !important;
+}
+
+/* TOP BAR ALERTS (Chef not assigned) */
+.navbar-nav .nav-link-style.text-danger {
+    background: linear-gradient(90deg, #5A3EFB 0%, #557EE6 50%, #92E36C 100%) !important;
+    background-size: 200% auto !important;
+    color: #ffffff !important;
+    padding: 0.6rem 1.25rem !important;
+    border-radius: $btn-radius !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.3px;
+    box-shadow: 0 4px 15px rgba(90, 62, 251, 0.3) !important;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+    animation: gradientShift 4s ease infinite;
+}
+
+.navbar-nav .nav-link-style.text-danger:hover {
+    transform: scale(1.02) translateY(-2px);
+    box-shadow: 0 8px 25px rgba(90, 62, 251, 0.45) !important;
+}
+
+.navbar-nav .nav-link-style.text-danger svg {
+    color: #ffffff !important;
+    stroke: #ffffff !important;
+}
+
+/* 7. Data Tables (React Data Tables & Standard Tables) */
+/* Table Container */
+.react-dataTable .rdt_Table,
+.table {
+    border-radius: $btn-radius !important;
+    background: transparent !important;
+    overflow: hidden;
+}
+
+/* Standard Table Headers */
+.table thead th,
+.table-light th,
+.table-light {
+    background: rgba(85, 126, 230, 0.04) !important;
+    border-bottom: 2px solid rgba(85, 126, 230, 0.1) !important;
+    font-weight: 700 !important;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.8px;
+    color: #557EE6 !important;
+    padding: 1.25rem 1rem !important;
+}
+
+/* React DataTable Headers */
+.react-dataTable .rdt_TableHeadRow {
+    background: transparent !important;
+    border-bottom: 1px solid rgba(226, 232, 240, 0.8) !important;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.8px;
+    color: #475569 !important;
+}
+
+/* Table Body Rows */
+.react-dataTable .rdt_TableRow,
+.table tbody tr {
+    background: transparent !important;
+    border-bottom: 1px solid rgba(226, 232, 240, 0.4) !important;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+}
+
+.react-dataTable .rdt_TableRow:hover,
+.table tbody tr:hover {
+    background-color: #ffffff !important;
+    transform: scale(1.005) !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03) !important;
+    border-radius: 8px !important;
+    z-index: 10;
+    position: relative;
+}
+
+.table bordered {
+    border: 1px solid rgba(226, 232, 240, 0.4) !important;
+}
+
+/* Table cell padding for breathability */
+.table tbody td {
+    padding: 1.25rem 1rem !important;
+    vertical-align: middle !important;
+    color: #334155 !important;
+    font-weight: 500 !important;
+}
+
+/* 8. Action Icons (View, Edit, Delete) */
+.react-dataTable .rdt_TableCell a.btn-sm,
+.react-dataTable .rdt_TableCell button.btn-sm,
+.table a.btn-sm,
+.table button.btn-sm {
+    margin: 2px 4px !important;
+    padding: 0.5rem !important;
+    transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px !important;
+    background: #f8fafc !important;
+    border: none !important;
+}
+
+.react-dataTable .rdt_TableCell a.btn-sm:hover,
+.react-dataTable .rdt_TableCell button.btn-sm:hover,
+.table a.btn-sm:hover,
+.table button.btn-sm:hover {
+    transform: scale(1.1) translateY(-2px) !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Targeted based on classic standard icons */
+/* ---------- VIEW ACTIONS ---------- */
+.text-info,
+.text-primary,
+[role="button"][title*="View" i],
+a[title*="View" i],
+.btn-outline-info,
+.btn-sm[title*="View" i] {
+    color: #4C8DFF !important;
+    background-color: rgba(76, 141, 255, 0.15) !important;
+}
+
+.text-info:hover,
+.text-primary:hover,
+[role="button"][title*="View" i]:hover,
+a[title*="View" i]:hover,
+.btn-sm[title*="View" i]:hover {
+    background-color: #4C8DFF !important;
+    color: #ffffff !important;
+}
+
+.react-dataTable [title*="View" i]:hover svg.feather-eye {
+    stroke: #ffffff !important;
+}
+
+.react-dataTable svg.feather-eye {
+    stroke: #4C8DFF !important;
+}
+
+/* ---------- EDIT ACTIONS ---------- */
+.text-success,
+[role="button"][title*="Edit" i],
+a[title*="Edit" i],
+.btn-outline-success,
+.btn-sm[title*="Edit" i] {
+    color: #10b981 !important;
+    background-color: rgba(16, 185, 129, 0.15) !important;
+}
+
+.text-success:hover,
+[role="button"][title*="Edit" i]:hover,
+a[title*="Edit" i]:hover,
+.btn-sm[title*="Edit" i]:hover {
+    background-color: #10b981 !important;
+    color: #ffffff !important;
+}
+
+.react-dataTable [title*="Edit" i]:hover svg.feather-edit,
+.react-dataTable [title*="Edit" i]:hover svg.feather-edit-2 {
+    stroke: #ffffff !important;
+}
+
+.react-dataTable svg.feather-edit,
+.react-dataTable svg.feather-edit-2 {
+    stroke: #10b981 !important;
+}
+
+/* ---------- DELETE ACTIONS ---------- */
+[role="button"][title*="Delete" i],
+a[title*="Delete" i],
+.btn-outline-danger,
+.trash-icon,
+.btn-sm[title*="Delete" i],
+.react-dataTable .rdt_TableCell .text-danger {
+    color: #ef4444 !important;
+    background-color: rgba(239, 68, 68, 0.15) !important;
+}
+
+[role="button"][title*="Delete" i]:hover,
+a[title*="Delete" i]:hover,
+.btn-sm[title*="Delete" i]:hover,
+.react-dataTable .rdt_TableCell .text-danger:hover {
+    background-color: #ef4444 !important;
+    color: #ffffff !important;
+}
+
+.react-dataTable [title*="Delete" i]:hover svg.feather-trash,
+.react-dataTable [title*="Delete" i]:hover svg.feather-trash-2,
+.react-dataTable .text-danger:hover svg {
+    stroke: #ffffff !important;
+}
+
+.react-dataTable svg.feather-trash,
+.react-dataTable svg.feather-trash-2 {
+    stroke: #ef4444 !important;
+}
+
+/* 9. Default Badge Overrides to match theme */
+.badge {
+    padding: 0.5rem 0.8rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.5px !important;
+    border-radius: 6px !important;
+    transition: all 0.2s ease !important;
+    box-shadow: none !important;
+    white-space: nowrap !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    line-height: 1 !important;
+}
+
+.badge.badge-light-primary {
+    background-color: rgba(85, 126, 230, 0.12) !important;
+    color: #557EE6 !important;
+    border: 1px solid rgba(85, 126, 230, 0.2) !important;
+}
+
+.badge.badge-success,
+.badge.badge-light-success,
+.badge-success,
+.bg-success {
+    background-color: rgba(16, 185, 129, 0.12) !important;
+    color: #10b981 !important;
+    border: 1px solid rgba(16, 185, 129, 0.25) !important;
+}
+
+.badge.badge-warning,
+.badge.badge-light-warning,
+.badge-warning,
+.bg-warning {
+    background-color: rgba(245, 158, 11, 0.12) !important;
+    color: #f59e0b !important;
+    border: 1px solid rgba(245, 158, 11, 0.25) !important;
+}
+
+.badge.badge-info,
+.badge.badge-light-info,
+.badge-info,
+.bg-info {
+    background-color: rgba(14, 165, 233, 0.12) !important;
+    color: #0ea5e9 !important;
+    border: 1px solid rgba(14, 165, 233, 0.25) !important;
+}
+
+.badge.badge-danger,
+.badge.badge-light-danger,
+.badge-danger,
+.bg-danger {
+    background-color: rgba(239, 68, 68, 0.12) !important;
+    color: #ef4444 !important;
+    border: 1px solid rgba(239, 68, 68, 0.25) !important;
+}
+
+.badge.badge-secondary,
+.badge.badge-light-secondary,
+.badge-secondary,
+.bg-secondary {
+    background-color: rgba(100, 116, 139, 0.12) !important;
+    color: #64748b !important;
+    border: 1px solid rgba(100, 116, 139, 0.25) !important;
+}
+
+/* 10. Modals & Dropdowns */
+.dropdown-menu {
+    border-radius: $premium-radius !important;
+    border: 1px solid rgba(255, 255, 255, 0.8) !important;
+    background: rgba(255, 255, 255, 0.98) !important;
+    backdrop-filter: blur(16px) !important;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08) !important;
+    padding: 0.5rem !important;
+}
+
+.dropdown-item {
+    border-radius: 8px !important;
+    padding: 0.6rem 1rem !important;
+    transition: all 0.2s ease;
+}
+
+.dropdown-item:hover {
+    background-color: rgba(85, 126, 230, 0.08) !important;
+    color: #557EE6 !important;
+    transform: translateX(4px);
+}
+
+.modal-content {
+    border-radius: $premium-radius !important;
+    border: 1px solid rgba(255, 255, 255, 0.8) !important;
+    background: rgba(255, 255, 255, 0.98) !important;
+    backdrop-filter: blur(16px) !important;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* 11. SweatyAlerts */
+.swal2-popup {
+    border-radius: $premium-radius !important;
+    background: rgba(255, 255, 255, 0.98) !important;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.15) !important;
+}
+
+.swal2-actions button {
+    border-radius: $btn-radius !important;
+}
+
+/* 12. Layout Fixes Preserved */
+.invoice-list-table-header .row>div {
+    padding: 0.75rem 1rem !important;
+}
+
+.invoice-list-table-header .justify-content-lg-end {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    flex-wrap: wrap !important;
+}
+
+.invoice-list-table-header .justify-content-lg-end>div.mr-1,
+.invoice-list-table-header .justify-content-lg-end>button.mr-1 {
+    margin-right: 0 !important;
+}
+
+.invoice-list-table-header .input-group {
+    min-width: 200px;
+}
+
+.image-gallery img {
+    border-radius: 8px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+    transition: transform 0.2s ease;
+}
+
+.image-gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Custom Inputs & Loaders */
+.css-1s2u09g-control,
+.css-1pahdxg-control,
+.select__control {
+    border-radius: $btn-radius !important;
+    border: 1px solid #e2e8f0 !important;
+    background-color: #f8fafc !important;
+}
+
+.css-1pahdxg-control.css-1pahdxg-control--is-focused,
+.select__control--is-focused {
+    background-color: #ffffff !important;
+    border-color: #557EE6 !important;
+    box-shadow: 0 0 0 3px rgba(85, 126, 230, 0.15) !important;
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background: linear-gradient(90deg, #92E36C 0%, #557EE6 49%, #5A3EFB 100%) !important;
+    border-color: #557EE6 !important;
+}
+
+
+
+
+/* 15. Pagination Color Fixes */
+.page-item.active .page-link,
+.dark-layout .page-item.active .page-link {
+    background-color: rgba(85, 126, 230, 0.1) !important;
+    /* Very light purple shade */
+    border-color: rgba(85, 126, 230, 0.2) !important;
+    color: #557EE6 !important;
+    /* Dark text for readability on light BG */
+    box-shadow: none !important;
+    font-weight: 600 !important;
+}
+
+.page-link {
+    color: #557EE6 !important;
+}
+
+.page-link:hover {
+    background-color: rgba(85, 126, 230, 0.05) !important;
+    color: #557EE6 !important;
+}
+
+/* Animations */
+.animate-fade-in {
+    animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.table-row-hover {
+    transition: all 0.3s ease;
+}
+
+.table-row-hover:hover {
+    transform: scale(1.01);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    background: #ffffff !important;
+    z-index: 10;
+    position: relative;
+    border-radius: 8px;
+}

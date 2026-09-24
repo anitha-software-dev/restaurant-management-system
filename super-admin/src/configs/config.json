@@ -1,0 +1,8 @@
+{
+  "NODE_ENV": "development",
+  "MEDIA_URL": "https://firebasestorage.googleapis.com/v0/b/restaurant-56c7a.firebasestorage.app/o/images%2F",
+  "BASE_URL": "http://partner-restaurant.s3-website-us-west-1.amazonaws.com",
+  "MANAGER_URL": "http://manager-restaurant.s3-website-us-west-1.amazonaws.com",
+  "PARTNER_URL": "http://partner-restaurant.s3-website-us-west-1.amazonaws.com",
+  "SITE_URL": ""
+}

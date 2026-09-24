@@ -1,0 +1,8 @@
+{
+  "NODE_ENV": "development",
+  "CURRENCY": "£",
+  "BASE_URL": "http://partner-restaurant.s3-website-us-west-1.amazonaws.com/",
+  "BASE_URL1": "http://localhost:3000/",
+  "SITE_URL": "http://app-restaurant.s3-website-us-west-1.amazonaws.com/",
+  "MEDIA_URL": "https://firebasestorage.googleapis.com/v0/b/restaurant-56c7a.firebasestorage.app/o/images%2F"
+}
