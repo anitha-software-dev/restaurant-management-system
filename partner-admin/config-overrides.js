@@ -1,4 +1,4 @@
-const SassRuleRewire = require('react-app-rewire-sass-rule')
+const SassRuleRewire = require('./sass-rule')
 const path = require('path')
 const rewireAliases = require('react-app-rewire-aliases')
 
