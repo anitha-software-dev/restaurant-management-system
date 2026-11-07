@@ -121,7 +121,7 @@
   },
   "scripts": {
     "start": "react-app-rewired start",
-    "build": "react-app-rewired build",
+    "build": "node build.js",
     "test": "react-app-rewired test",
     "eject": "react-app-rewired eject",
     "lint": "eslint src/**/*.js src/**/*.jsx",
@@ -143,7 +143,6 @@
     "eslint": "^7.8.0",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-react": "^7.20.6",
-    "node-sass": "^4.13.1",
     "prettier": "^2.6.2",
     "react-app-rewire-aliases": "^0.2.0",
     "react-app-rewire-postcss": "^3.0.2",
