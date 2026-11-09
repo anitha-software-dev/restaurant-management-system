@@ -1,8 +1,19 @@
-﻿# Restaurant Management System
+# Restaurant Management System
 
 > Restaurant Management System with Restaurant Web Panel, Partner Admin, Manager Admin, and Super Admin applications.
 
 A comprehensive multi-application platform designed to handle end-to-end restaurant management, from customer food discovery and online ordering to partner operations, branch management, and platform-level administration.
+
+---
+
+## 🚀 Live Demos
+
+| Application | Live Demo Link | Description |
+|---|---|---|
+| 🌐 **Customer Web App** | [restaurant-app-brown-nu.vercel.app](https://restaurant-app-brown-nu.vercel.app/) | Customer food browsing, cart & ordering |
+| 🍽️ **Partner Admin** | [restaurant-partner-admin.vercel.app](https://restaurant-partner-admin.vercel.app/) | Restaurant partner & branch management |
+| 🧑‍🍳 **Manager Admin** | [restaurant-manager-admin-psi.vercel.app](https://restaurant-manager-admin-psi.vercel.app/) | Store operations & live dispatch board |
+| 👑 **Super Admin** | [restaurant-super-admin-tawny.vercel.app](https://restaurant-super-admin-tawny.vercel.app/) | Platform-wide system administration |
 
 ---
 
